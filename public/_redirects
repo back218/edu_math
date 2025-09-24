@@ -1,1 +1,11 @@
+# SPA fallback rule
+# This redirects all routes to index.html so React Router can handle them
 /*    /index.html   200
+
+# Optional: Handle API routes if you have any
+/api/*  /api/:splat  200
+
+# Optional: Handle specific file extensions that shouldn't be redirected
+/*.css  /static/css/:splat  200
+/*.js   /static/js/:splat   200
+/*.json /:splat            200
